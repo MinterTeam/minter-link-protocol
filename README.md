@@ -24,7 +24,7 @@ Optional fields should be kept in the RLP structure but may have value of empty 
 
 Data field is the same as Data of Minter transaction. It is described in the [docs](https://docs.minter.network/#section/Transactions)
 
-- `p` - password of the check. RLP-encoded string. If you want to make reedeem check link and you don't know address of recipient than you can't make check's proof. In this case you can leave Proof field empty and pass raw password in this param.
+- `p` - password of the check. RLP-encoded bytes array. If you want to make reedeem check link and you don't know address of recipient than you can't make check's proof. In this case you can leave Proof field empty and pass raw password in this param.
 
 Example:
 `https://bip.to/tx?d=f8bb4601018...5f8431ba0?p=83313233`
