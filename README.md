@@ -14,9 +14,9 @@ type Data struct {
   Data      []byte
   Payload   []byte
   
-  Nonce     *int      // optional
-  GasPrice  *int      // optional
-  GasCoin   *[10]byte // optional
+  Nonce     *uint64      // optional
+  GasPrice  *uint8       // optional
+  GasCoin   *[10]byte    // optional
 }
 ```
 
