@@ -12,8 +12,7 @@ Example:
 type Data struct {  
   Type      byte
   Data      []byte
-  Payload   []byte
-  
+  Payload   []byte       // optional
   Nonce     *uint64      // optional
   GasPrice  *uint8       // optional
   GasCoin   *[10]byte    // optional
