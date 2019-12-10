@@ -1,5 +1,9 @@
 ### Minter Link Protocol
 
+It describes how to represent transaction data into a simple link, which can be easily consumed by user as a link or as QR. Then link is being processed by [bip.to](https://bip.to) web app or any associated mobile app. App retrieves data from the link, generate valid transaction using logged user's private key and send it.
+
+So everything a user needs to do to send a transaction is to click on the link or scan QR code.  
+
 Example:
 `https://bip.to/tx?d=f8bb4601018...5f8431ba0`
 
