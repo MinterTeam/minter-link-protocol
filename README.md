@@ -16,16 +16,15 @@ Example:
 type Data struct {  
   Type      byte
   Data      []byte
-  Payload   []byte       // optional
-  Nonce     *uint64      // optional
-  GasPrice  *uint8       // optional
-  GasCoin   *[10]byte    // optional
+  Payload   []byte
+  Nonce     *uint64      // optional, client app can autofill it
+  GasPrice  *uint8       // optional, client app can autofill it
+  GasCoin   *uint32      // optional, client app can autofill it
 }
 ```
 
-Optional fields should be kept in the RLP structure but may have value of empty list `[ 0xc0 ]`.
-
 Data field is the same as Data of Minter transaction. It is described in the [docs](https://docs.minter.network/#section/Transactions)
+
 
 #### Query params
 
@@ -34,7 +33,14 @@ Data field is the same as Data of Minter transaction. It is described in the [do
 Example:
 `https://bip.to/tx/-LEJ...AgIA?p=MTIz`
 
+
 #### Native app implementation notes
 
 Native wallet app should be associated with [bip.to](https://bip.to) website with Universal/App Links protocol;
+
+
+#### SDK implementation notes
+
+Optional fields should be kept in the RLP structure but may have value of empty list `[ 0xc0 ]`.
+SDK should accept `null` or omitted values for optional field from users. SDK should not force users to pass empty arrays if users want to mark field as empty.
 
