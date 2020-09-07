@@ -17,9 +17,9 @@ type Data struct {
   Type      byte
   Data      []byte
   Payload   []byte
-  Nonce     *uint64      // optional, client app can autofill it
-  GasPrice  *uint8       // optional, client app can autofill it
-  GasCoin   *uint32      // optional, client app can autofill it
+  Nonce     *uint64  `rlp:"nilList"`  // optional, client app can autofill it
+  GasPrice  *uint8   `rlp:"nilList"`  // optional, client app can autofill it
+  GasCoin   *uint32  `rlp:"nilList"`  // optional, client app can autofill it
 }
 ```
 
